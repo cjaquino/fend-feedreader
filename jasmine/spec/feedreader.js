@@ -37,7 +37,7 @@ $(function() {
              expect(feed.url).toBeDefined();
              expect(feed.url.length).not.toBe(0);
            };
-         })
+         });
 
 
         /* Loops through each feed
@@ -49,11 +49,13 @@ $(function() {
              expect(name.url).toBeDefined();
              expect(name.url.length).not.toBe(0);
            };
-         })
+         });
     });
 
 
     /* TODO: Write a new test suite named "The menu" */
+    describe("The Menu", function() {
+
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
@@ -82,4 +84,5 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+    });
 }());
