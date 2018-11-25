@@ -70,7 +70,10 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it("toggles visibility when menu icon is clicked", function() {
-            
+            document.querySelector(".menu-icon-link").click();
+            expect(document.querySelector("body")).not.toHaveClass('menu-hidden');
+            document.querySelector(".menu-icon-link").click();
+            expect(document.querySelector("body")).toHaveClass('menu-hidden');
           });
 
     /* TODO: Write a new test suite named "Initial Entries" */
