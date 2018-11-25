@@ -52,8 +52,6 @@ $(function() {
          });
     });
 
-
-    /* TODO: Write a new test suite named "The menu" */
     describe("The Menu", function() {
 
 
@@ -64,7 +62,7 @@ $(function() {
            expect(document.querySelector("body")).toHaveClass('menu-hidden');
          });
 
-         /* TODO: Write a test that ensures the menu changes
+         /* Ensure the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
@@ -75,8 +73,10 @@ $(function() {
             document.querySelector(".menu-icon-link").click();
             expect(document.querySelector("body")).toHaveClass('menu-hidden');
           });
+      });
 
-    /* TODO: Write a new test suite named "Initial Entries" */
+    describe("Initial Entries", function() {
+
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
