@@ -54,7 +54,6 @@ $(function() {
 
     describe("The Menu", function() {
 
-
         /* Ensure the menu element is
          * hidden by default
          */
@@ -76,7 +75,9 @@ $(function() {
       });
 
     describe("Initial Entries", function() {
-
+        beforeEach(function(done) {
+          loadFeed(0, done);
+        });
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -84,6 +85,10 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+         it("contains at least one entry element in feed container", function() {
+           const myFeed = document.querySelector(".feed");
+           expect(myFeed.getElementsByClassName("entry").length>0).toBe(true); 
+         });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
 
