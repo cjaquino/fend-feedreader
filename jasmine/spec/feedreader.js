@@ -94,6 +94,8 @@ $(function() {
 
       beforeEach(function(done) {
         loadFeed(0);
+        // Storing innerText ensures that the initial content is stored in the
+        // variable, not the selector
         content = document.querySelector(".feed").innerText;
         loadFeed(1,done);
       });
