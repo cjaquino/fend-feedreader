@@ -72,7 +72,7 @@ $(function() {
             document.querySelector(".menu-icon-link").click();
             expect(document.querySelector("body")).toHaveClass('menu-hidden');
           });
-      });
+    });
 
     describe("Initial Entries", function() {
         beforeEach(function(done) {
@@ -87,10 +87,13 @@ $(function() {
          */
          it("contains at least one entry element in feed container", function() {
            const myFeed = document.querySelector(".feed");
-           expect(myFeed.getElementsByClassName("entry").length>0).toBe(true); 
+           expect(myFeed.getElementsByClassName("entry").length>0).toBe(true);
          });
+    });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
+    describe("New Feed Selection", function() {
+
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
