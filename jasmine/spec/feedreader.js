@@ -69,7 +69,9 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-          it("")
+          it("toggles visibility when menu icon is clicked", function() {
+            
+          });
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
