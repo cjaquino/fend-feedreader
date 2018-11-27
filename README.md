@@ -7,6 +7,8 @@ The application is a feed reader that displays feeds of the following:
 - [HTML5 Rocks](http://feeds.feedburner.com/html5rocks)
 - [Linear Digressions](http://feeds.feedburner.com/udacity-linear-digressions)
 
+RSS feeds can be modified by editing the allFeeds variable in js/app.js
+
 ## How to Run the Application
 1. Clone the project: https://github.com/cjaquino/fend-feedreader
 2. Open index.html in your favorite browser!
