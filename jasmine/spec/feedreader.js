@@ -99,10 +99,13 @@ $(function() {
           // Storing innerText ensures that the initial content is stored in the
           // variable, not the selector
           feed0 = document.querySelector(".feed").innerText;
-        });
-        loadFeed(1, function() {
-          feed1 = document.querySelector(".feed").innerText;
-          done();
+
+          // call for a new feed after the loadFeed 0 to ensure the new feed
+          // is loaded after the old feed finishes
+          loadFeed(1, function() {
+            feed1 = document.querySelector(".feed").innerText;
+            done();
+          });
         });
       });
 
