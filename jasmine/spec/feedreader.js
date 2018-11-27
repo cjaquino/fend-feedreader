@@ -58,7 +58,7 @@ $(function() {
          * hidden by default
          */
          it("is hidden", function() {
-           expect(document.querySelector("body")).toHaveClass('menu-hidden');
+           expect($("body").hasClass('menu-hidden')).toBe(true); //as suggested
          });
 
          /* Ensure the menu changes
@@ -68,9 +68,9 @@ $(function() {
           */
           it("toggles visibility when menu icon is clicked", function() {
             document.querySelector(".menu-icon-link").click();
-            expect(document.querySelector("body")).not.toHaveClass('menu-hidden');
+            expect($("body").hasClass('menu-hidden')).toBe(false); //as suggested
             document.querySelector(".menu-icon-link").click();
-            expect(document.querySelector("body")).toHaveClass('menu-hidden');
+            expect($("body").hasClass('menu-hidden')).toBe(true); //as suggested
           });
     });
 
