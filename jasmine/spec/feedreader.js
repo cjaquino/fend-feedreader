@@ -90,21 +90,28 @@ $(function() {
     });
 
     describe("New Feed Selection", function() {
-      let content = '';
+      let feed0,feed1 = ['',''];
 
+      // before each test, load two different feeds' innerText into variables
+      // so we can compare later
       beforeEach(function(done) {
-        loadFeed(0);
-        // Storing innerText ensures that the initial content is stored in the
-        // variable, not the selector
-        content = document.querySelector(".feed").innerText;
-        loadFeed(1,done);
+        loadFeed(0, function() {
+          // Storing innerText ensures that the initial content is stored in the
+          // variable, not the selector
+          feed0 = document.querySelector(".feed").innerText;
+        });
+        loadFeed(1, function() {
+          feed1 = document.querySelector(".feed").innerText;
+          done();
+        });
       });
 
         /* Ensure when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          */
         it("content actually changes", function() {
-          expect(document.querySelector(".feed").innerText===content).toBe(false);
+          // expect(document.querySelector(".feed").innerText===content).toBe(false);
+          expect(feed0 === feed1).toBe(false);
         });
     });
 }());
